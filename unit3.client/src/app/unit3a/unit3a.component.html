@@ -1,0 +1,16 @@
+
+
+<div id="divArticle">
+  <div *ngFor="let doc of article.response.docs">
+
+    <table width="650">
+      <tr>
+        <td>
+          <a [href]="doc.web_url"><img [src]="doc.multimedia.thumbnail.url" [height]="doc.multimedia.thumbnail.height" [width]="doc.multimedia.thumbnail.width" [title]="doc.multimedia.caption" /></a>
+        </td>
+        <td>{{doc.abstract}}&nbsp;&nbsp;{{doc.byline.original}}</td>
+      </tr>
+    </table>
+    <br /><br />
+  </div>
+</div>
